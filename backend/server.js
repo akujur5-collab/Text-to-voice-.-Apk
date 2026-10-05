@@ -60,6 +60,52 @@ app.get('/health', (req, res) => {
   });
 });
 
+app.get('/', (req, res) => {
+  const repoUrl = process.env.GITHUB_REPOSITORY_URL || 'https://github.com/nt894285/VoiceCraft-AI';
+  const releasesUrl = `${repoUrl.replace(/\/$/, '')}/releases/latest`;
+
+  res.send(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoiceCraft AI - Android Text-to-Speech Studio</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #f8fafc; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
+    .card { background: #1e293b; border-radius: 20px; padding: 40px; max-width: 560px; width: 100%; text-align: center; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); border: 1px solid #334155; }
+    h1 { margin-top: 0; font-size: 28px; color: #60a5fa; }
+    p { color: #94a3b8; font-size: 16px; line-height: 1.6; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; padding: 16px 32px; font-size: 18px; font-weight: bold; border-radius: 12px; text-decoration: none; margin: 24px 0 16px; transition: transform 0.2s, background 0.2s; box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4); }
+    .btn:hover { background: linear-gradient(135deg, #1d4ed8, #1e40af); transform: translateY(-2px); }
+    .features { text-align: left; background: #0f172a; padding: 16px 20px; border-radius: 12px; margin-top: 20px; font-size: 14px; }
+    .features li { margin-bottom: 8px; color: #cbd5e1; }
+    .footer { font-size: 12px; color: #64748b; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎙️ VoiceCraft AI</h1>
+    <p>Professional AI-powered Text-to-Speech Studio for Android creators, narrators, and storytellers.</p>
+    <a href="${releasesUrl}" class="btn" target="_blank" rel="noopener noreferrer">
+      ⬇️ DOWNLOAD APK
+    </a>
+    <p style="font-size: 13px; color: #64748b;">Get the latest official release directly from GitHub Releases.</p>
+    <div class="features">
+      <strong>✨ Features:</strong>
+      <ul>
+        <li>Studio-quality Hindi, English, and regional Indian AI voices</li>
+        <li>5-Second narrator voice auditions</li>
+        <li>MP3 and studio-master lossless WAV export</li>
+        <li>YouTube Shorts & Reels duration estimator</li>
+        <li>Offline project storage and one-tap audio sharing</li>
+      </ul>
+    </div>
+    <div class="footer">Version 1.0.0 • Requires Android 8.0+ (API 26+)</div>
+  </div>
+</body>
+</html>`);
+});
+
 /**
  * POST /api/tts
  * 
