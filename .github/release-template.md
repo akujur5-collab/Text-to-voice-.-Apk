@@ -1,6 +1,6 @@
 # VoiceCraft AI Release Template
 
-## VoiceCraft AI v1.0.0
+## VoiceCraft AI v1.0.1
 
 **VoiceCraft AI**  
 AI-powered Text-to-Speech Android application for creators, narrators, and voice-over artists.
@@ -24,7 +24,7 @@ AI-powered Text-to-Speech Android application for creators, narrators, and voice
 ---
 
 ### 📥 Installation Instructions
-1. Download the **`VoiceCraft-AI-v1.0.0.apk`** file from the Assets section below.
+1. Download the **`VoiceCraft-AI-v1.0.1.apk`** file from the Assets section below.
 2. Open the downloaded APK on your Android phone.
 3. If Android prompts you with a security warning, tap **Settings** and allow **Install unknown apps** for your browser or file manager.
 4. Tap **Install** to proceed with the installation.
@@ -33,7 +33,7 @@ AI-powered Text-to-Speech Android application for creators, narrators, and voice
 ---
 
 ### 📱 Release Specifications
-- **App Version**: `1.0.0` (`versionCode: 1`)
+- **App Version**: `1.0.1` (`versionCode: 2`)
 - **Release Date**: Current Release
 - **Minimum Android Version**: Android 8.0 (Oreo, API level 26)
 - **Target Android Version**: Android 15 (API level 36)

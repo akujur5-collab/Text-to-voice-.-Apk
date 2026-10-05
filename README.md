@@ -3,8 +3,8 @@
 [![Android](https://img.shields.io/badge/Platform-Android-3DDC84?style=flat-square&logo=android&logoColor=white)](https://android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.2.10-7F52FF?style=flat-square&logo=kotlin&logoColor=white)](https://kotlinlang.org)
 [![Compose](https://img.shields.io/badge/Jetpack-Compose%20M3-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white)](https://developer.android.com/jetpack/compose)
-[![GitHub Release](https://img.shields.io/github/v/release/nt894285/VoiceCraft-AI?label=Latest%20Release&style=flat-square&color=blue)](../../releases/latest)
-[![Build Status](https://img.shields.io/badge/Build-GitHub%20Actions-brightgreen?style=flat-square&logo=githubactions&logoColor=white)](../../actions)
+[![GitHub Release](https://img.shields.io/github/v/release/akujur5-collab/Text-to-voice-.-Apk?label=Latest%20Release&style=flat-square&color=blue)](https://github.com/akujur5-collab/Text-to-voice-.-Apk/releases/latest)
+[![Build Status](https://img.shields.io/badge/Build-GitHub%20Actions-brightgreen?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/akujur5-collab/Text-to-voice-.-Apk/actions)
 
 **VoiceCraft AI** is a professional Android mobile application built for YouTube creators, YouTube Shorts/Reels creators, storytellers, educational content makers, devotional readers, and voice-over artists. It converts written Hindi, English, and regional Indian language text into natural-sounding, studio-grade speech using Google's official AI audio models and high-definition speech synthesis.
 
@@ -14,20 +14,19 @@
 
 Download the latest Android APK directly from GitHub Releases:
 
-[![Download Latest APK](https://img.shields.io/badge/Download-Latest%20APK-2563EB?style=for-the-badge&logo=android&logoColor=white)](../../releases/latest)
+[![Download Latest APK](https://img.shields.io/badge/Download-Latest%20APK-2563EB?style=for-the-badge&logo=android&logoColor=white)](https://github.com/akujur5-collab/Text-to-voice-.-Apk/releases/latest)
 
-👉 **[Download Latest APK from GitHub Releases](../../releases/latest)**
-
-*Note: The button and links above dynamically direct to the latest release page of this repository (`https://github.com/<owner>/<repo>/releases/latest`).*
+[📥 Download Latest APK](https://github.com/akujur5-collab/Text-to-voice-.-Apk/releases/latest)
 
 ### 📥 Android Installation Instructions:
-1. Tap the **Download Latest APK** button above or navigate to [Releases](../../releases/latest).
-2. Download the **`VoiceCraft-AI-v1.0.0.apk`** file onto your Android device.
-3. Open the downloaded APK file from your notification tray or Files app.
-4. If prompted with *"For your security, your phone is not allowed to install unknown apps from this source"*:
-   - Tap **Settings**.
-   - Toggle **Allow from this source** to ON.
-5. Tap **Install** and open **VoiceCraft AI**.
+1. Open the Download Latest APK link.
+2. Open the latest GitHub Release.
+3. Scroll to Assets.
+4. Tap the VoiceCraft-AI APK.
+5. Download it.
+6. Open the downloaded APK.
+7. If Android asks for permission to install from this source, allow it.
+8. Install the app.
 
 ---
 
@@ -92,8 +91,8 @@ android {
         applicationId = "com.aistudio.voicecraftai.vckdpl"
         minSdk = 26
         targetSdk = 36
-        versionCode = 2        // 👈 Increment integer by 1 for each new release
-        versionName = "1.0.1"  // 👈 Update semantic version string (e.g., 1.0.1)
+        versionCode = 2        // 👈 Increment integer by 1 for each new release (e.g. 2 -> 3)
+        versionName = "1.0.1"  // 👈 Update semantic version string (e.g. "1.0.1" -> "1.0.2")
     }
 }
 ```
@@ -116,14 +115,14 @@ git push origin v1.0.1
 #### 3. Automatic GitHub Actions Processing
 Once the tag `v1.0.1` is pushed:
 1. GitHub Actions initiates the **Build & Publish Release APK** workflow.
-2. Checks out the code and sets up Java JDK 17 and Android SDK.
+2. Checks out the repository and sets up Java JDK 17 and Android SDK.
 3. Decodes the production signing keystore (or utilizes a secure build keystore).
 4. Runs automated unit tests (`./gradlew testDebugUnitTest`).
 5. Executes the release build (`./gradlew assembleRelease`).
 6. Verifies and renames the APK to `VoiceCraft-AI-v1.0.1.apk`.
 7. Uploads the APK as an Actions workflow artifact.
 8. Automatically creates a GitHub Release titled **VoiceCraft AI v1.0.1** and attaches the generated APK.
-9. Users can immediately download the new APK at `../../releases/latest`.
+9. Users can immediately download the new APK at [https://github.com/akujur5-collab/Text-to-voice-.-Apk/releases/latest](https://github.com/akujur5-collab/Text-to-voice-.-Apk/releases/latest).
 
 ---
 
@@ -153,7 +152,7 @@ keytool -genkey -v -keystore my-upload-key.jks \
 
 ### 3. Add Secrets to GitHub:
 Go to your repository on GitHub:
-1. Navigate to **Settings → Secrets and variables → Actions**.
+1. Navigate to **Settings → Secrets and variables → Actions** at `https://github.com/akujur5-collab/Text-to-voice-.-Apk/settings/secrets/actions`.
 2. Click **New repository secret** and add:
    - `ANDROID_KEYSTORE_BASE64`: Copy and paste the entire contents of `keystore_base64.txt`.
    - `STORE_PASSWORD`: The password chosen for the keystore.
@@ -192,4 +191,4 @@ The generated APKs are saved to:
 ## 📄 License & Distribution
 
 VoiceCraft AI is distributed under the Apache 2.0 License.
-For the latest updates and release assets, visit [GitHub Releases](../../releases).
+For the latest updates and release assets, visit [GitHub Releases](https://github.com/akujur5-collab/Text-to-voice-.-Apk/releases).

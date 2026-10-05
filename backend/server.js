@@ -61,7 +61,7 @@ app.get('/health', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  const repoUrl = process.env.GITHUB_REPOSITORY_URL || 'https://github.com/nt894285/VoiceCraft-AI';
+  const repoUrl = process.env.GITHUB_REPOSITORY_URL || 'https://github.com/akujur5-collab/Text-to-voice-.-Apk';
   const releasesUrl = `${repoUrl.replace(/\/$/, '')}/releases/latest`;
 
   res.send(`<!DOCTYPE html>

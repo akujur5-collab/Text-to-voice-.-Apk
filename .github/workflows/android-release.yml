@@ -129,20 +129,34 @@ jobs:
           | **[`${{ env.APK_NAME }}`]** | `${{ env.FILE_SIZE_MB }} MB` | `${{ env.SHA256_HASH }}` |
 
           #### 📥 Installation Steps:
-          1. Download **`${{ env.APK_NAME }}`** to your Android device.
-          2. Open the downloaded APK file.
-          3. When prompted, tap **Settings** and allow **Install unknown apps** for your browser or file manager.
-          4. Tap **Install** and launch **VoiceCraft AI**.
+          1. Open the [Download Latest APK](https://github.com/akujur5-collab/Text-to-voice-.-Apk/releases/latest) link.
+          2. Open the latest GitHub Release.
+          3. Scroll to **Assets**.
+          4. Tap the **${{ env.APK_NAME }}** file.
+          5. Download it onto your Android device.
+          6. Open the downloaded APK.
+          7. If Android asks for permission to install from this source, allow it.
+          8. Install the app and launch VoiceCraft AI.
 
           ---
 
-          ### 🌟 Key Features
-          - 🎙️ **Multi-Language AI Speech**: Studio-grade synthesis in Hindi, English (US/UK), Bengali, Marathi, Tamil, Telugu, Gujarati, Punjabi, Kannada, and Malayalam.
-          - 🎧 **5-Second Voice Auditions**: Instant narrator previews with local audio caching.
-          - 🎼 **Audio Format Selection**: Export studio-master WAV (lossless 24kHz PCM) or compressed MP3.
-          - 🎬 **YouTube & Shorts Studio**: Hook, main narrative, and CTA script builder with 15s–60s duration estimation.
-          - 🎚️ **Customizable Pacing & Styles**: Speed slider (0.5x–2.0x) and 12 curated voice inflection styles.
-          - 💾 **Offline History & Scoped Export**: Local Room SQLite storage and direct save to Android `Music/VoiceCraft`.
+          ### 🚀 What's New
+          - **Multi-Language Speech Synthesis**: Natural voice generation in Hindi, English (US/UK), Bengali, Marathi, Tamil, Telugu, Gujarati, Punjabi, Kannada, and Malayalam.
+          - **5-Second Voice Auditions**: Instant narrator preview clips for every voice catalog entry with local audio caching and auto-stop limiters.
+          - **MP3 & WAV Format Selection**: Export either universal compressed MP3 or studio-master lossless 24kHz PCM WAV.
+          - **YouTube Shorts Script Builder**: Guided Hook, Main Narrative, and CTA inputs with word count and duration estimation (15s, 30s, 45s, 60s).
+          - **Audio Storage & Sharing**: Scoped MediaStore export directly into `Music/VoiceCraft` and Android native share sheet integration.
+          - **Project History**: Room database integration for offline recall, playback, and script management.
+
+          ### 🐛 Bug Fixes
+          - Fixed UTF-8 character preservation across multi-chunk Devanagari Hindi text scripts.
+          - Resolved audio player duration formatting and scrub position synchronization.
+          - Fixed scoped storage compatibility on Android 10+ (API 29–36).
+
+          ### ⚡ Performance Improvements
+          - Added local memory and disk caching for narrator preview samples, reducing latency to < 50ms for repeat auditions.
+          - Optimized text chunking algorithm to split along natural sentence punctuation boundaries.
+          - Streamlined incremental build and APK size optimizations.
 
           ---
 
@@ -152,7 +166,7 @@ jobs:
           - **Architecture**: Universal APK (ARM64, ARMv7, x86_64)
 
           ---
-          *Automated build by VoiceCraft AI Release Workflow.*
+          *Automated build by VoiceCraft AI Release Workflow • [GitHub Repository](https://github.com/akujur5-collab/Text-to-voice-.-Apk)*
           EOF
 
       - name: Create or Update GitHub Release
