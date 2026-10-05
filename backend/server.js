@@ -100,7 +100,7 @@ app.get('/', (req, res) => {
         <li>Offline project storage and one-tap audio sharing</li>
       </ul>
     </div>
-    <div class="footer">Version 1.0.0 • Requires Android 8.0+ (API 26+)</div>
+    <div class="footer">Version 1.0.1 • Requires Android 8.0+ (API 26+)</div>
   </div>
 </body>
 </html>`);

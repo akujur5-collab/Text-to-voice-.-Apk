@@ -274,7 +274,7 @@ fun SettingsScreen(
                     SettingRowItem(
                         icon = Icons.Default.Info,
                         title = "About VoiceCraft AI",
-                        subtitle = "Version 1.0.0 • Professional AI Text-to-Speech Studio",
+                        subtitle = "Version ${com.example.BuildConfig.VERSION_NAME} • Professional AI Text-to-Speech Studio",
                         onClick = { showAboutDialog = true }
                     )
 
